@@ -1,11 +1,12 @@
 /* ----- Top Navigation ----- */
 .top-nav {
     background-color: rgb(171, 244, 255);
+    height: 100px;
 }
 
 .top-nav div {
     display: inline-block;
-    height: 100px;
+    height: inherit;
 }
 
 .logo {
