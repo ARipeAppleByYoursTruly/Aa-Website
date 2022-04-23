@@ -5,6 +5,7 @@
 }
 
 .top-nav div {
+    border: 1px solid black;
     display: inline-block;
     height: inherit;
     padding: 25% 0;
