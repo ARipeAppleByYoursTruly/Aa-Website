@@ -4,6 +4,10 @@
     height: 100px;
 }
 
+.top-nav div {
+    display: inline-block;
+}
+
 .logo {
     height: 100px;
 }
