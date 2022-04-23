@@ -1,4 +1,8 @@
 .top-nav {
     background-color: rgb(171, 244, 255);
-    height: 50px;
+    height: 100px;
+}
+
+.logo {
+    height: 100px;
 }
