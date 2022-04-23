@@ -4,7 +4,7 @@
     height: 100px;
 }
 
-.top-nav div {
+.top-nav li {
     border: 1px solid black;
     display: inline-block;
     height: inherit;
