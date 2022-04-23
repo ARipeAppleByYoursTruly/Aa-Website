@@ -1,16 +1,103 @@
-/* ----- Top Navigation ----- */
+/* ----- Custom Fonts ----- */
+/* Normal */
+@font-face {
+    font-family: Roboto;
+    src: url("/Aa-Website/fonts/roboto-regular-webfont.woff2");
+}
+
+/* Italic */
+@font-face {
+    font-family: Roboto;
+    src: url("/Aa-Website/fonts/roboto-italic-webfont.woff2");
+    font-style: italic;
+}
+
+/* Bold */
+@font-face {
+    font-family: Roboto;
+    src: url("/Aa-Website/fonts/roboto-bold-webfont.woff2");
+    font-weight: bold;
+}
+
+/* Bold & italic */
+@font-face {
+    font-family: Roboto;
+    src: url("/Aa-Website/fonts/roboto-bolditalic-webfont.woff2");
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+/* ----- Global Styles ----- */
+* {
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ----- Top Navigation Styles ----- */
 .top-nav {
     background-color: rgb(171, 244, 255);
-    height: 100px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    column-gap: 1vw;
+    padding: 0 1vw;
+    margin: 0;
 }
 
 .top-nav li {
-    border: 1px solid black;
-    display: inline-block;
-    height: inherit;
-    padding: 25% 0;
+    height: 100px;
+    font-size: 30px;
 }
 
-.logo {
+.top-nav div:hover {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid rgb(109, 170, 255);
+    border-radius: 10px;
+}
+
+.top-nav div:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid rgb(0, 55, 133);
+    border-radius: 10px;
+}
+
+
+/* 1st item */
+.top-nav .to-home div {
+    width: 100px;
+}
+
+.top-nav .to-home img {
+    height: 90px;
+    padding-right: 5px;
+}
+
+
+/* 2nd item */
+.top-nav .to-stuff div {
+    width: 125px;
     height: 100px;
+    padding: 10px 5px;
 }
