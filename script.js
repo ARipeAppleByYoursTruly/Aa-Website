@@ -20,7 +20,7 @@ function main() {
                 var current_div = current_li.getElementsByTagName("div")[0];
 
                 if (window.getComputedStyle(current_div).display == "none") {
-                    current_div.style.display = "block";
+                    current_div.style.display = "flex";
                 }
                 else {
                     current_div.style.display = "none";
