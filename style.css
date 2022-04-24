@@ -1,4 +1,4 @@
-/* ----- Custom Fonts ----- */
+/* ===== Custom Fonts ===== */
 /* Normal */
 @font-face {
     font-family: Roboto;
@@ -29,7 +29,8 @@
 
 
 
-/* ----- Global Styles ----- */
+/* ===== Styles ===== */
+/* ----- Global ----- */
 * {
     box-sizing: border-box;
     font-family: Roboto, Arial, sans-serif;
@@ -40,6 +41,12 @@ a {
     text-decoration: none;
 }
 
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .center {
     display: flex;
     align-items: center;
@@ -48,56 +55,160 @@ a {
 
 
 
-/* ----- Top Navigation Styles ----- */
-.top-nav {
-    background-color: rgb(171, 244, 255);
-    height: 120px;
-    display: flex;
-    align-items: center;
-}
+/* ----- For printer ----- */
+@media print {
+    * {
+        display: none;
+    }
 
-.top-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    column-gap: 1vw;
-    padding: 0 1vw;
-    margin: 0;
-}
-
-.top-nav li {
-    height: 100px;
-    font-size: 30px;
-}
-
-.top-nav div:hover {
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid rgb(109, 170, 255);
-    border-radius: 10px;
-}
-
-.top-nav div:active {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid rgb(0, 55, 133);
-    border-radius: 10px;
+    main {
+        display: block;
+    }
 }
 
 
-/* 1st item */
-.top-nav .to-home div {
-    width: 100px;
-}
 
-.top-nav .to-home img {
-    height: 90px;
-    padding-right: 5px;
-}
+/* ----- For browser ----- */
+@media screen {
+    /* ===== Top Navigation ===== */
+    /* ----- Both ----- */
+    .top-nav {
+        border-bottom: 4px solid rgb(133, 220, 255);
+        height: 120px;
+        display: flex;
+        align-items: center;
+    }
+
+    .top-nav ul {
+        list-style-type: none;
+        margin: 0;
+    }
+
+    .top-nav li {
+        height: 100px;
+        font-size: 30px;
+    }
 
 
-/* 2nd item */
-.top-nav .to-stuff div {
-    width: 125px;
-    height: 100px;
-    padding: 10px 5px;
+    /* 1st item */
+    .top-nav .to-home div {
+        width: 100px;
+    }
+
+    .top-nav .to-home img {
+        height: 90px;
+        padding-right: 5px;
+    }
+
+
+    /* 2nd item */
+    .top-nav .to-stuff div {
+        padding: 10px 5px;
+    }
+
+
+    /* Menu button */
+    .top-nav .menu img {
+        width: 50px;
+    }
+
+
+
+    /* ----- PC ----- */
+    @media (min-width: 601px) {
+        .top-nav {
+            padding: 0 1vw;
+        }
+        .top-nav ul {
+            display: flex;
+            align-items: center;
+            column-gap: 1vw;
+            padding: 0;
+        }
+
+        .top-nav ul div:hover {
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid rgb(109, 170, 255);
+            border-radius: 10px;
+        }
+        
+        .top-nav ul div:active {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid rgb(0, 55, 133);
+            border-radius: 10px;
+        }
+
+
+        /* 2nd item */
+        .top-nav .to-stuff div {
+            width: 125px;
+            height: 100px;
+        }
+
+
+        /* Menu button */
+        .top-nav .menu {
+            display: none;
+        }
+    }
+
+
+
+    /* ----- Mobile ----- */
+    @media (max-width: 600px) {
+        .top-nav {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-top: 10px;
+        }
+
+        .top-nav ul {
+            padding: 0;
+        }
+
+        .top-nav ul div {
+            background-color: white;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-radius: 0;
+            position: relative;
+            display: none;
+        }
+
+        .top-nav ul div:hover {
+            background-color: rgb(239, 239, 239);
+        }
+
+        .top-nav ul div:active {
+            background-color: rgb(204, 204, 204);
+        }
+
+
+        /* 1st item */
+        .top-nav .to-home {
+            justify-content: flex-start;
+        }
+
+        .top-nav .to-home div {
+            border: none;
+            margin-left: 1vw;
+            display: flex;
+        }
+
+
+        /* 2nd item */
+        .top-nav .to-stuff div {
+            width: 100vw;
+            height: 50px;
+            top: 0;
+        }
+
+
+        /* Menu button */
+        .top-nav .menu {
+            position: absolute;
+            right: 1vw;
+        }
+    }
 }
