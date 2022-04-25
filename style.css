@@ -93,6 +93,7 @@ button {
     /* 1st item */
     .top-nav .to-home div {
         width: 100px;
+        height: 100px;
     }
 
     .top-nav .to-home img {
@@ -126,17 +127,19 @@ button {
             padding: 0;
         }
 
-        .top-nav ul div:hover {
+        .top-nav ul div {
             border-top: 5px solid transparent;
-            border-bottom: 5px solid rgb(109, 170, 255);
+            border-bottom: 5px solid rgb(184, 184, 184);
             border-radius: 10px;
+        }
+
+        .top-nav ul div:hover {
+            border-bottom: 5px solid rgb(109, 170, 255);
         }
         
         .top-nav ul div:active {
             background-color: rgba(0, 0, 0, 0.1);
-            border-top: 5px solid transparent;
             border-bottom: 5px solid rgb(0, 55, 133);
-            border-radius: 10px;
         }
 
 
