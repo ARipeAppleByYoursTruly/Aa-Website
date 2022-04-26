@@ -15,120 +15,118 @@
     <script src="w3.js"></script>
 
     <style>
-        @media screen {
-            main {
-                width: 80%;
-                margin: auto;
-            }
+        main {
+            width: 80%;
+            margin: auto;
+        }
 
 
 
-            /* ===== Header ===== */
-            main header {
-                height: calc(100vh - 120px);
-                min-height: 600px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                border-bottom: 2px solid gray;
-            }
+        /* ===== Header ===== */
+        main header {
+            height: calc(100vh - 120px);
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 2px solid gray;
+        }
 
 
-            /* 1st heading */
-            main header h1 {
-                font-size: 90px;
-            }
+        /* 1st heading */
+        main header h1 {
+            font-size: 90px;
+        }
 
 
-            /* 2nd heading */
-            main header h2 {
-                font-size: 40px;
-                text-align: center;
-            }
+        /* 2nd heading */
+        main header h2 {
+            font-size: 40px;
+            text-align: center;
+        }
 
 
-            /* Button */
-            main header a {
-                background-color: rgb(0, 123, 255);
-                color: white;
-                font-size: 30px;
-                padding: 15px;
-                border-radius: 10px;
-            }
+        /* Button */
+        main header a {
+            background-color: rgb(0, 123, 255);
+            color: white;
+            font-size: 30px;
+            padding: 15px;
+            border-radius: 10px;
+        }
 
-            main header a:hover {
-                background-color: rgb(37, 143, 255);
-                box-shadow: 10px 5px 5px gray;
-            }
+        main header a:hover {
+            background-color: rgb(37, 143, 255);
+            box-shadow: 10px 5px 5px gray;
+        }
 
-            main header a:active {
-                background-color: rgb(0, 106, 219);
-                box-shadow: 0px 0px 5px 5px gray;
-            }
-
-
-
-            /* ===== About me ===== */
-            /* ----- Both ----- */
-            main .about-me {
-                margin-top: 50px;
-            }
+        main header a:active {
+            background-color: rgb(0, 106, 219);
+            box-shadow: 0px 0px 5px 5px gray;
+        }
 
 
+
+        /* ===== About me ===== */
+        /* ----- Both ----- */
+        main .about-me {
+            margin: 50px 0;
+        }
+
+
+        /* Profile pic */
+        main .about-me div:nth-child(1) img {
+            border-radius: 50%;
+        }
+        
+
+        /* Description */
+        main .about-me div:nth-child(2) {
+            text-align: center;
+            margin: auto;
+        }
+
+        main .about-me div:nth-child(2) h2 {
+            font-size: 30px;
+        }
+
+        main .about-me div:nth-child(2) p {
+            font-size: 20px;
+        }
+
+        main .about-me div:nth-child(2) a {
+            color: rgb(0, 98, 203);
+        }
+
+
+
+        /* ----- PC ----- */
+        @media (min-width: 601px) {
             /* Profile pic */
             main .about-me div:nth-child(1) img {
-                border-radius: 50%;
+                width: 30%;
             }
-            
+
 
             /* Description */
             main .about-me div:nth-child(2) {
-                text-align: center;
-                margin: auto;
+                width: 50%;
+                min-width: 400px;
             }
-
-            main .about-me div:nth-child(2) h2 {
-                font-size: 30px;
-            }
-
-            main .about-me div:nth-child(2) p {
-                font-size: 20px;
-            }
-
-            main .about-me div:nth-child(2) a {
-                color: rgb(0, 98, 203);
-            }
+        }
 
 
 
-            /* ----- PC ----- */
-            @media (min-width: 601px) {
-                /* Profile pic */
-                main .about-me div:nth-child(1) img {
-                    width: 30%;
-                }
-
-
-                /* Description */
-                main .about-me div:nth-child(2) {
-                    width: 50%;
-                    min-width: 400px;
-                }
-            }
-
-
-
-            /* ----- Mobile ----- */
-            @media (max-width: 600px) {
-                main .about-me div:nth-child(1) img {
-                    width: 80%;
-                }
+        /* ----- Mobile ----- */
+        @media (max-width: 600px) {
+            main .about-me div:nth-child(1) img {
+                width: 80%;
             }
         }
     </style>
 </head>
 <body>
-    <nav w3-include-html="html-snippets/top-nav.html" class="top-nav"></nav>
+    <nav w3-include-html="html-snippets/top-nav.html" class="top-nav"><nav>
 
     <main>
         <header>
@@ -150,11 +148,13 @@
                     I might share some of my limited knowledge about some stuff, be it games, programming, or others. Most of them, if not all, are very niche, so yay?
                 </p>
                 <p>
-                    You can message me by <a href="https://github.com/ARipeAppleByYoursTruly/Aa-Website/issues">opening an issue on Github</a>, where this website is built on. I'm treating it as a public message board, so no private message for now.
+                    You can <span style="text-decoration:underline 2px">message me</span> by <a href="https://github.com/ARipeAppleByYoursTruly/Aa-Website/issues">opening an issue on Github</a>, where this website is built on. I'm treating it as a public message board, so no private message for now.
                 </p>
             </div>
         </div>
     </main>
+
+    <footer w3-include-html="html-snippets/footer.html" class="page-footer"><footer>
 
     <script src="script.js"></script>
 </body>

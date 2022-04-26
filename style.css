@@ -29,8 +29,6 @@
 
 
 
-/* ===== Styles ===== */
-/* ----- Global ----- */
 * {
     box-sizing: border-box;
     font-family: Roboto, Arial, sans-serif;
@@ -41,12 +39,6 @@ a {
     text-decoration: none;
 }
 
-button {
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .center {
     display: flex;
     align-items: center;
@@ -55,163 +47,210 @@ button {
 
 
 
-/* ----- For printer ----- */
-@media print {
-    * {
-        display: none;
-    }
+/* ===== Top Navigation ===== */
+/* ----- Both ----- */
+.top-nav {
+    border-bottom: 4px solid rgb(133, 220, 255);
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
 
-    main {
-        display: block;
-    }
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.top-nav li {
+    height: 100px;
+    font-size: 30px;
+}
+
+
+/* 1st item */
+.top-nav .to-home div {
+    width: 100px;
+    height: 100px;
+}
+
+.top-nav .to-home img {
+    height: 90px;
+    padding-right: 5px;
+}
+
+
+/* 2nd item */
+.top-nav .to-stuff div {
+    padding: 10px 5px;
+}
+
+
+/* Menu button */
+.top-nav .menu img {
+    width: 50px;
 }
 
 
 
-/* ----- For browser ----- */
-@media screen {
-    /* ===== Top Navigation ===== */
-    /* ----- Both ----- */
+/* ----- PC ----- */
+@media (min-width: 601px) {
     .top-nav {
-        border-bottom: 4px solid rgb(133, 220, 255);
-        height: 120px;
+        padding: 0 1vw;
+    }
+    .top-nav ul {
         display: flex;
         align-items: center;
+        column-gap: 1vw;
+        padding: 0;
     }
 
-    .top-nav ul {
-        list-style-type: none;
-        margin: 0;
+    .top-nav ul div {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid rgb(184, 184, 184);
+        border-radius: 10px;
     }
 
-    .top-nav li {
-        height: 100px;
-        font-size: 30px;
+    .top-nav ul div:hover {
+        border-bottom: 5px solid rgb(109, 170, 255);
     }
-
-
-    /* 1st item */
-    .top-nav .to-home div {
-        width: 100px;
-        height: 100px;
-    }
-
-    .top-nav .to-home img {
-        height: 90px;
-        padding-right: 5px;
+    
+    .top-nav ul div:active {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-bottom: 5px solid rgb(0, 55, 133);
     }
 
 
     /* 2nd item */
     .top-nav .to-stuff div {
-        padding: 10px 5px;
+        width: 125px;
+        height: 100px;
     }
 
 
     /* Menu button */
-    .top-nav .menu img {
-        width: 50px;
+    .top-nav .menu {
+        display: none;
+    }
+}
+
+
+
+/* ----- Mobile ----- */
+@media (max-width: 600px) {
+    .top-nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-top: 10px;
+    }
+
+    .top-nav ul {
+        padding: 0;
+    }
+
+    .top-nav ul div {
+        background-color: white;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        border-radius: 0;
+        position: relative;
+        display: none;
+    }
+
+    .top-nav div:hover {
+        background-color: rgb(239, 239, 239);
+    }
+
+    .top-nav div:active {
+        background-color: rgb(204, 204, 204);
     }
 
 
+    /* 1st item */
+    .top-nav .to-home {
+        justify-content: flex-start;
+    }
 
-    /* ----- PC ----- */
-    @media (min-width: 601px) {
-        .top-nav {
-            padding: 0 1vw;
-        }
-        .top-nav ul {
-            display: flex;
-            align-items: center;
-            column-gap: 1vw;
-            padding: 0;
-        }
-
-        .top-nav ul div {
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid rgb(184, 184, 184);
-            border-radius: 10px;
-        }
-
-        .top-nav ul div:hover {
-            border-bottom: 5px solid rgb(109, 170, 255);
-        }
-        
-        .top-nav ul div:active {
-            background-color: rgba(0, 0, 0, 0.1);
-            border-bottom: 5px solid rgb(0, 55, 133);
-        }
-
-
-        /* 2nd item */
-        .top-nav .to-stuff div {
-            width: 125px;
-            height: 100px;
-        }
-
-
-        /* Menu button */
-        .top-nav .menu {
-            display: none;
-        }
+    .top-nav .to-home div {
+        border: none;
+        border-radius: 5px;
+        margin-left: 1vw;
+        display: flex;
     }
 
 
-
-    /* ----- Mobile ----- */
-    @media (max-width: 600px) {
-        .top-nav {
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            padding-top: 10px;
-        }
-
-        .top-nav ul {
-            padding: 0;
-        }
-
-        .top-nav ul div {
-            background-color: white;
-            border-top: 2px solid black;
-            border-bottom: 2px solid black;
-            border-radius: 0;
-            position: relative;
-            display: none;
-        }
-
-        .top-nav ul div:hover {
-            background-color: rgb(239, 239, 239);
-        }
-
-        .top-nav ul div:active {
-            background-color: rgb(204, 204, 204);
-        }
+    /* 2nd item */
+    .top-nav .to-stuff div {
+        width: 100vw;
+        height: 50px;
+        top: 0;
+    }
 
 
-        /* 1st item */
-        .top-nav .to-home {
-            justify-content: flex-start;
-        }
-
-        .top-nav .to-home div {
-            border: none;
-            margin-left: 1vw;
-            display: flex;
-        }
-
-
-        /* 2nd item */
-        .top-nav .to-stuff div {
-            width: 100vw;
-            height: 50px;
-            top: 0;
-        }
+    /* Menu button */
+    .top-nav .menu {
+        position: absolute;
+        right: 1vw;
+        border-radius: 5px;
+        height: 60px;
+        width: 60px;
+        cursor: pointer;
+    }
+}
 
 
-        /* Menu button */
-        .top-nav .menu {
-            position: absolute;
-            right: 1vw;
-        }
+
+/* ===== Page Footer ===== */
+/* ----- Both ----- */
+.page-footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 1vw; 
+    height: 120px;
+    border-top: 4px solid rgb(133, 220, 255);
+}
+
+.page-footer .scroll-to-top {
+    height: 100px;
+    cursor: pointer;
+}
+    
+.page-footer img {
+    width: 90px;
+}
+
+
+/* ----- PC ----- */
+@media (min-width: 601px) {
+    .page-footer .scroll-to-top {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid rgb(184, 184, 184);
+        border-radius: 10px;
+    }
+
+    .page-footer .scroll-to-top:hover {
+        border-bottom: 5px solid rgb(109, 170, 255);
+    }
+    
+    .page-footer .scroll-to-top:active {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-bottom: 5px solid rgb(0, 55, 133);
+    }
+}
+
+
+/* ----- Mobile ----- */
+@media (max-width: 600px) {
+    .page-footer .scroll-to-top {
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .page-footer .scroll-to-top:hover {
+        background-color: rgb(239, 239, 239);
+    }
+
+    .page-footer .scroll-to-top:active {
+        background-color: rgb(204, 204, 204);
     }
 }
