@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 
-    <title>Home of My Stuff - Aa's Website</title>
+    <title>Welcome to Aa's Website</title>
 
-    <base href="/Aa-Website/">
+    <link rel="icon" type="image/webp" href="/Aa-Website/images/favicon.webp">
+    <link rel="stylesheet" href="/Aa-Website/normalize.css">
+    <link rel="stylesheet" href="/Aa-Website/style.css">
 
-    <link rel="icon" type="image/webp" href="images/favicon.webp">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-
-    <script src="w3.js"></script>
+    <script src="/Aa-Website/w3.js"></script>
 
     <style>
-        main {
-            width: 80%;
-            margin: auto;
+        /* ===== Top Navigation ===== */
+        @media (min-width: 601px) {
+            .top-nav .to-home div {
+                border-bottom: 5px solid rgb(109, 170, 255);
+            }
         }
 
 
-
+        
         /* ===== Header ===== */
         main header {
             height: calc(100vh - 120px);
@@ -30,12 +30,6 @@
             flex-direction: column;
             align-items: center;
             border-bottom: 2px solid gray;
-        }
-
-
-        /* 1st heading */
-        main header h1 {
-            font-size: 90px;
         }
 
 
@@ -70,7 +64,7 @@
         /* ===== About me ===== */
         /* ----- Both ----- */
         main .about-me {
-            margin: 50px 0;
+            margin-top: 50px;
         }
 
 
@@ -126,13 +120,13 @@
     </style>
 </head>
 <body>
-    <nav w3-include-html="html-snippets/top-nav.html" class="top-nav"></nav>
+    <nav w3-include-html="/Aa-Website/html-snippets/top-nav.html" class="top-nav"></nav>
 
     <main>
         <header>
             <h1>Welcome</h1>
             <h2>Gain Niche Knowledge<br>By</h2>
-            <a href="">Checking Out My Stuff</a>
+            <a href="my-stuff">Checking Out My Stuff</a>
         </header>
         <div class="about-me">
             <div class="center">
@@ -154,8 +148,8 @@
         </div>
     </main>
 
-    <footer w3-include-html="html-snippets/footer.html" class="page-footer"></footer>
+    <footer w3-include-html="/Aa-Website/html-snippets/footer.html" class="page-footer"></footer>
 
-    <script src="script.js"></script>
+    <script src="/Aa-Website/script.js"></script>
 </body>
 </html>

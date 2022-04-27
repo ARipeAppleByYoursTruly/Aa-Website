@@ -199,6 +199,21 @@ a {
 
 
 
+/* ===== Main ===== */
+main {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
+/* 1st heading */
+main header h1 {
+    font-size: 90px;
+}
+
+
+
 /* ===== Page Footer ===== */
 /* ----- Both ----- */
 .page-footer {
