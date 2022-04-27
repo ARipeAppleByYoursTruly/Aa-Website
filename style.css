@@ -218,13 +218,25 @@ main header h1 {
 /* ----- Both ----- */
 .page-footer {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     padding: 0 1vw; 
     height: 120px;
     border-top: 4px solid rgb(133, 220, 255);
 }
 
+
+/* Message */
+.page-footer .message {
+    font-size: 20px;
+}
+
+.page-footer .message a {
+    color: rgb(0, 123, 255);
+}
+
+
+/* Scroll to top */
 .page-footer .scroll-to-top {
     height: 100px;
     cursor: pointer;
