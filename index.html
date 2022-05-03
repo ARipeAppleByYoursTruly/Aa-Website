@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
@@ -13,18 +13,10 @@
     <script src="/Aa-Website/w3.js"></script>
 
     <style>
-        /* ===== Top Navigation ===== */
-        @media (min-width: 601px) {
-            .top-nav .to-home div {
-                border-bottom: 5px solid rgb(109, 170, 255);
-            }
-        }
-
-
-        
-        /* ===== Header ===== */
+        /* ===== main ===== */
+        /* header */
         main header {
-            height: calc(100vh - 120px);
+            height: calc(100vh - 105px);
             min-height: 600px;
             display: flex;
             flex-direction: column;
@@ -32,52 +24,57 @@
             border-bottom: 2px solid gray;
         }
 
-
-        /* 2nd heading */
         main header h2 {
             font-size: 40px;
             text-align: center;
         }
 
-
-        /* Button */
         main header a {
-            background-color: rgb(0, 123, 255);
+            background-color: hsl(215, 100%, 50%);
             color: white;
             font-size: 30px;
             padding: 15px;
             border-radius: 10px;
+            text-align: center;
         }
-
         main header a:hover {
-            background-color: rgb(37, 143, 255);
-            box-shadow: 10px 5px 5px gray;
+            background-color: hsl(215, 100%, 65%);
         }
-
         main header a:active {
-            background-color: rgb(0, 106, 219);
-            box-shadow: 0px 0px 5px 5px gray;
+            background-color: hsl(215, 100%, 35%);
         }
 
 
-
-        /* ===== About me ===== */
-        /* ----- Both ----- */
+        /* .about-me */
         main .about-me {
             margin-top: 50px;
         }
 
-
-        /* Profile pic */
         main .about-me div:nth-child(1) img {
             border-radius: 50%;
         }
-        
+        @media (min-width: 601px) {
+            main .about-me div:nth-child(1) img {
+                width: 30%;
+                min-width: 200px;
+            }
+        }
+        @media (max-width: 600px) {
+            main .about-me div:nth-child(1) img {
+                width: 80%;
+                max-width: 200px;
+            }
+        }
 
-        /* Description */
         main .about-me div:nth-child(2) {
             text-align: center;
             margin: auto;
+        }
+        @media (min-width: 601px) {
+            main .about-me div:nth-child(2) {
+                width: 50%;
+                min-width: 400px;
+            }
         }
 
         main .about-me div:nth-child(2) h2 {
@@ -89,33 +86,13 @@
         }
 
         main .about-me div:nth-child(2) a {
-            color: rgb(0, 98, 203);
+            color: hsl(215, 100%, 50%);
         }
-
-
-
-        /* ----- PC ----- */
-        @media (min-width: 601px) {
-            /* Profile pic */
-            main .about-me div:nth-child(1) img {
-                width: 30%;
-            }
-
-
-            /* Description */
-            main .about-me div:nth-child(2) {
-                width: 50%;
-                min-width: 400px;
-            }
+        main .about-me div:nth-child(2) a:hover {
+            color: hsl(215, 100%, 65%);
         }
-
-
-
-        /* ----- Mobile ----- */
-        @media (max-width: 600px) {
-            main .about-me div:nth-child(1) img {
-                width: 80%;
-            }
+        main .about-me div:nth-child(2) a:active {
+            color: hsl(215, 100%, 35%);
         }
     </style>
 </head>
