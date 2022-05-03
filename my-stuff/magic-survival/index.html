@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <title>Magic Survival Wiki | Aa's Website</title>
+
+    <link rel="icon" type="image/webp" href="/Aa-Website/images/favicon.webp">
+    <link rel="stylesheet" href="/Aa-Website/normalize.css">
+    <link rel="stylesheet" href="/Aa-Website/style.css">
+
+    <script src="/Aa-Website/w3.js"></script>
+
+    <style>
+        /* ===== main ===== */
+        /* ----- header ----- */
+        main header {
+            margin-top: 20px;
+        }
+
+        main header h1 {
+            font-size: 50px;
+            margin-top: 10px;
+        }
+
+
+        /* nav */
+        main header nav {
+            font-size: 15px;
+        }
+
+
+        /* .home */
+        main header nav .home {
+            width: 80px;
+        }
+
+        main header nav .home img {
+            width: 30px;
+        }
+
+
+
+        /* ----- .links ----- */
+        main .links ul {
+            list-style-type: none;
+            font-size: 20px;
+        }
+
+        main .links a {
+            color: var(--cta-normal);
+        }
+        main .links a:hover {
+            color: var(--cta-hover);
+        }
+        main .links a:active {
+            color: var(--cta-active);
+        }
+    </style>
+</head>
+<body>
+    <nav w3-include-html="/Aa-Website/html-snippets/top-nav.html" class="top-nav"></nav>
+
+    <main>
+        <header>
+            <nav>
+                <div class="home center">
+                    <img src="images/magic-survival-logo.webp" alt="Logo for Magic Survival">
+                    &nbsp;Home
+                </div>
+            </nav>
+            <h1>Magic Survival Wiki</h1>
+        </header>
+        <nav class="links">
+            <ul>
+                <li><h2><a href="">About the Game</a></h2></li>
+                <li>
+                    <h2>Compendium</h2>
+                    <ul>
+                        <li><h3><a href="">Magic</a></h3></li>
+                        <li><h3><a href="">Artifacts</a></h3></li>
+                        <li><h3><a href="">Research</a></h3></li>
+                        <li><h3><a href="">Classes</a></h3></li>
+                        <li><h3><a href="">Subjects</a></h3></li>
+                        <li><h3><a href="">Maps</a></h3></li>
+                        <li><h3><a href="">Items</a></h3></li>
+                        <li><h3><a href="">Enemies</a></h3></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><h3><a href="">Getting Started</a></h3></li>
+                        <li><h3><a href="">Tips on Surviving for 30 mins</a></h3></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer w3-include-html="/Aa-Website/html-snippets/footer.html" class="page-footer"></footer>
+
+    <script src="/Aa-Website/script.js"></script>
+</body>
+</html>

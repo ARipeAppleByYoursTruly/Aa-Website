@@ -13,19 +13,26 @@
     <script src="/Aa-Website/w3.js"></script>
 
     <style>
-        /* ===== .card ===== */
+        /* ===== main ===== */
+        /* header */
+        main header h1 {
+            font-size: 50px;
+        }
+
+
+        /* .card */
         main .card {
-            border: 5px solid hsl(215, 100%, 50%);
+            border: 5px solid var(--cta-normal);
             border-radius: 10px;
             height: 400px;
             flex-direction: column;
         }
         main .card:hover {
-            border-color: hsl(215, 100%, 65%);
+            border-color: var(--cta-hover);
             background-color: hsla(215, 100%, 90%, 0.5);
         }
         main .card:active {
-            border-color: hsl(215, 100%, 35%);
+            border-color: var(--cta-active);
             background-color: hsla(215, 100%, 50%, 0.5);
         }
         @media (min-width: 1001px) {
@@ -57,7 +64,7 @@
             <h1>My Stuff</h1>
         </header>
         <div class="page">
-            <a href="" class="card center">
+            <a href="magic-survival" class="card center">
                 <div class="center">
                     <img src="magic-survival/images/magic-survival-logo.webp" alt="Logo for Magic Survival">
                 </div>

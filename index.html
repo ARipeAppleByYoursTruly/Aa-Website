@@ -24,13 +24,18 @@
             border-bottom: 2px solid gray;
         }
 
+        main header h1 {
+            font-size: 90px;
+            text-align: center;
+        }
+
         main header h2 {
             font-size: 40px;
             text-align: center;
         }
 
         main header a {
-            background-color: hsl(215, 100%, 50%);
+            background-color: var(--cta-normal);
             color: white;
             font-size: 30px;
             padding: 15px;
@@ -38,10 +43,10 @@
             text-align: center;
         }
         main header a:hover {
-            background-color: hsl(215, 100%, 65%);
+            background-color: var(--cta-hover);
         }
         main header a:active {
-            background-color: hsl(215, 100%, 35%);
+            background-color: var(--cta-active);
         }
 
 
@@ -86,13 +91,13 @@
         }
 
         main .about-me div:nth-child(2) a {
-            color: hsl(215, 100%, 50%);
+            color: var(--cta-normal);
         }
         main .about-me div:nth-child(2) a:hover {
-            color: hsl(215, 100%, 65%);
+            color: var(--cta-hover);
         }
         main .about-me div:nth-child(2) a:active {
-            color: hsl(215, 100%, 35%);
+            color: var(--cta-active);
         }
     </style>
 </head>

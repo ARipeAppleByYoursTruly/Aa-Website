@@ -30,7 +30,7 @@
 
 
 /* ==== Variables ===== */
-body {
+:root {
     --cta-normal: hsl(215, 100%, 50%);
     --cta-hover: hsl(215, 100%, 65%);
     --cta-active: hsl(215, 100%, 35%);
@@ -115,11 +115,6 @@ main {
     width: 80%;
     margin: auto;
     margin-bottom: 100px;
-}
-
-main h1 {
-    font-size: 90px;
-    text-align: center;
 }
 
 
