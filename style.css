@@ -29,16 +29,16 @@
 
 
 
-* {
-    box-sizing: border-box;
-    font-family: Roboto, Arial, sans-serif;
-    color: black;
+/* ==== Variables ===== */
+body {
+    --cta-normal: hsl(215, 100%, 50%);
+    --cta-hover: hsl(215, 100%, 65%);
+    --cta-active: hsl(215, 100%, 35%);
 }
 
-a {
-    text-decoration: none;
-}
 
+
+/* ===== "Functions" ===== */
 .center {
     display: flex;
     align-items: center;
@@ -47,237 +47,120 @@ a {
 
 
 
-/* ===== Top Navigation ===== */
-/* ----- Both ----- */
+/* ===== Entire page ===== */
+* {
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+    color: black;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* ===== .top-nav ===== */
 .top-nav {
-    border-bottom: 4px solid rgb(133, 220, 255);
-    height: 120px;
     display: flex;
     align-items: center;
 }
 
 .top-nav ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 30px;
+    padding: 0 30px;
     margin: 0;
 }
 
-.top-nav li {
-    height: 100px;
+.top-nav div {
+    border-bottom: 5px solid var(--cta-normal);
+    height: 110px;
     font-size: 30px;
+}
+.top-nav div:hover {
+    border-bottom: 5px solid var(--cta-hover);
+}
+.top-nav div:active {
+    border-bottom: 5px solid var(--cta-active);
 }
 
 
-/* 1st item */
+/* .to-home */
 .top-nav .to-home div {
     width: 100px;
-    height: 100px;
 }
 
 .top-nav .to-home img {
-    height: 90px;
-    padding-right: 5px;
+    height: 100px;
 }
 
 
-/* 2nd item */
+/* .to-stuff */
 .top-nav .to-stuff div {
-    padding: 10px 5px;
-}
-
-
-/* Menu button */
-.top-nav .menu img {
-    width: 50px;
+    width: 120px;
 }
 
 
 
-/* ----- PC ----- */
-@media (min-width: 601px) {
-    .top-nav {
-        padding: 0 1vw;
-    }
-    .top-nav ul {
-        display: flex;
-        align-items: center;
-        column-gap: 1vw;
-        padding: 0;
-    }
-
-    .top-nav ul div {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid rgb(184, 184, 184);
-        border-radius: 10px;
-    }
-
-    .top-nav ul div:hover {
-        border-bottom: 5px solid rgb(109, 170, 255);
-    }
-    
-    .top-nav ul div:active {
-        background-color: rgba(0, 0, 0, 0.1);
-        border-bottom: 5px solid rgb(0, 55, 133);
-    }
-
-
-    /* 2nd item */
-    .top-nav .to-stuff div {
-        width: 125px;
-        height: 100px;
-    }
-
-
-    /* Menu button */
-    .top-nav .menu {
-        display: none;
-    }
-}
-
-
-
-/* ----- Mobile ----- */
-@media (max-width: 600px) {
-    .top-nav {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        padding-top: 10px;
-    }
-
-    .top-nav ul {
-        padding: 0;
-    }
-
-    .top-nav ul div {
-        background-color: white;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
-        border-radius: 0;
-        position: relative;
-        display: none;
-    }
-
-    .top-nav div:hover {
-        background-color: rgb(239, 239, 239);
-    }
-
-    .top-nav div:active {
-        background-color: rgb(204, 204, 204);
-    }
-
-
-    /* 1st item */
-    .top-nav .to-home {
-        justify-content: flex-start;
-    }
-
-    .top-nav .to-home div {
-        border: none;
-        border-radius: 5px;
-        margin-left: 1vw;
-        display: flex;
-    }
-
-
-    /* 2nd item */
-    .top-nav .to-stuff div {
-        width: 100vw;
-        height: 50px;
-        top: 0;
-    }
-
-
-    /* Menu button */
-    .top-nav .menu {
-        position: absolute;
-        right: 1vw;
-        border-radius: 5px;
-        height: 60px;
-        width: 60px;
-        cursor: pointer;
-    }
-}
-
-
-
-/* ===== Main ===== */
+/* ===== main ===== */
 main {
     width: 80%;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
-
-/* 1st heading */
-main header h1 {
+main h1 {
     font-size: 90px;
+    text-align: center;
 }
 
 
 
-/* ===== Page Footer ===== */
-/* ----- Both ----- */
+/* ===== .page-footer ===== */
 .page-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1vw; 
-    height: 120px;
-    border-top: 4px solid rgb(133, 220, 255);
+    padding: 0 30px;
 }
 
 
-/* Message */
+/* .message */
 .page-footer .message {
     font-size: 20px;
 }
 
 .page-footer .message a {
-    color: rgb(0, 123, 255);
+    color: var(--cta-normal);
+}
+.page-footer .message a:hover {
+    color: var(--cta-hover);
+}
+.page-footer .message a:active {
+    color: var(--cta-active);
 }
 
 
-/* Scroll to top */
+/* .scroll-to-top */
 .page-footer .scroll-to-top {
-    height: 100px;
     cursor: pointer;
 }
     
-.page-footer img {
-    width: 90px;
+.page-footer .scroll-to-top img {
+    border-top: 5px solid var(--cta-normal);
+    width: 80px;
 }
-
-
-/* ----- PC ----- */
-@media (min-width: 601px) {
-    .page-footer .scroll-to-top {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid rgb(184, 184, 184);
-        border-radius: 10px;
-    }
-
-    .page-footer .scroll-to-top:hover {
-        border-bottom: 5px solid rgb(109, 170, 255);
-    }
-    
-    .page-footer .scroll-to-top:active {
-        background-color: rgba(0, 0, 0, 0.1);
-        border-bottom: 5px solid rgb(0, 55, 133);
-    }
+.page-footer .scroll-to-top img:hover {
+    border-top: 5px solid var(--cta-hover);
 }
-
-
-/* ----- Mobile ----- */
-@media (max-width: 600px) {
-    .page-footer .scroll-to-top {
-        background-color: white;
-        border-radius: 5px;
-    }
-
-    .page-footer .scroll-to-top:hover {
-        background-color: rgb(239, 239, 239);
-    }
-
-    .page-footer .scroll-to-top:active {
-        background-color: rgb(204, 204, 204);
-    }
+.page-footer .scroll-to-top img:active {
+    border-top: 5px solid var(--cta-active);
 }
