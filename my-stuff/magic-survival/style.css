@@ -1,0 +1,36 @@
+/* ===== main ===== */
+/* ----- header ----- */
+main header {
+    margin-top: 20px;
+}
+
+main header h1 {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+
+/* nav */
+main header nav {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+main header nav a {
+    color: var(--cta-normal);
+}
+main header nav a:hover {
+    color: var(--cta-hover);
+}
+main header nav a:active {
+    color: var(--cta-active);
+}
+
+
+/* .home */
+main header nav .home img {
+    width: 30px;
+}
