@@ -1,4 +1,9 @@
 /* ===== main ===== */
+main p {
+    font-size: 23px;
+}
+
+
 /* ----- header ----- */
 main header {
     margin-top: 20px;
